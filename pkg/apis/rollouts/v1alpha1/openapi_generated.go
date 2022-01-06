@@ -2608,6 +2608,12 @@ func schema_pkg_apis_rollouts_v1alpha1_MetricProvider(ref common.ReferenceCallba
 							Ref:         ref("github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1.GraphiteMetric"),
 						},
 					},
+					"influxdb": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Influxdb specifies the Influxdb metric to query",
+							Ref:         ref("github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1.InfluxdbMetric"),
+						},
+					},
 				},
 			},
 		},
