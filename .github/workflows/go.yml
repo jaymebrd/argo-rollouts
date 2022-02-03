@@ -2,7 +2,7 @@ name: Go
 on:
   push:
     branches:
-      - "master"
+      - "test/branch"
       - "release-*"
   pull_request:
     branches:
