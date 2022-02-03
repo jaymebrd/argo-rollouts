@@ -107,7 +107,7 @@ jobs:
           make docs
 
       - name: Ensure nothing changed
-        run: git diff --exit-code
+        run: git diff
 
       - name: first step
         run: mkdir downloads
