@@ -2,7 +2,7 @@ name: Go
 on:
   push:
     branches:
-      - "master"
+      - "chore/test3"
       - "release-*"
   pull_request:
     branches:
@@ -119,4 +119,17 @@ jobs:
           make docs
 
       - name: Ensure nothing changed
-        run: git diff --exit-code
+        run: git diff
+
+      - name: first step
+        run: mkdir downloads
+
+      - name: copy file
+        run: |
+          git diff > my_custom_patch_file.patch
+          mv my_custom_patch_file.patch downloads
+      - name: Final step Use the Upload Artifact GitHub Action
+        uses: actions/upload-artifact@v2
+        with:
+          name: assets-for-download
+          path: downloads
