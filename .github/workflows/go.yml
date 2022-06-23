@@ -2,7 +2,7 @@ name: Go
 on:
   push:
     branches:
-      - "chore/test3"
+      - "test/test4"
       - "release-*"
   pull_request:
     branches:
